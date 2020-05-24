@@ -17,7 +17,7 @@ installations on my laptop and desktop computers.
 * Turn on swap: `swapon /dev/mapper/vg01-swap`.
 * Generate `/mnt/etc/fstab`: `genfstab -L /mnt >> /mnt/etc/fstab`.
 * Install Arch to `/mnt`: `pacstrap /mnt base linux linux-firmware git vim rake man-db man-pages texinfo xfsprogs lvm2`.
-* Jump into new Arch install: `chroot /mnt /bin/bash`.
+* Jump into new Arch install: `arch-chroot /mnt`.
 * Setup resolver `echo "nameserver 192.168.100.50" >> /etc/resolv.conf`.
 
 # Install scripts
