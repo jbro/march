@@ -62,7 +62,7 @@ pacstrap "$root" base linux linux-firmware git rake xfsprogs lvm2 sudo grub efib
 echo Writing "$root/etc/fstab"...
 genfstab -L "$root" >> "$root/etc/fstab"
 echo Set host name, timezone, input and locale...
-systemd-firstboot --prompt-root-password --root="$root" --locale=en_DK.UTF-8 --locale-message=en_GB.UTF-8 --timezone=Europe/Copenhagen --hostname="$hostname" --keymap=uk
+systemd-firstboot --root="$root" --locale=en_DK.UTF-8 --locale-message=en_GB.UTF-8 --timezone=Europe/Copenhagen --hostname="$hostname" --keymap=uk
 echo Create "$root/etc/hosts"...
 echo "127.0.0.1    localhost" > "$root/etc/hosts"
 echo "::1          localhost" >> "$root/etc/hosts"
@@ -91,4 +91,6 @@ arch-chroot "$root" git clone https://github.com/jbro/march.git /opt/march
 echo
 echo Done
 echo
-echo Reboot into new install
+echo "Don't forget to set the root password with:"
+echo "# arch-chroot $root passwd"
+echo and eboot into new install and log in as root
