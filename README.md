@@ -1,4 +1,7 @@
-# Installation check list
+MArch (Manage Arch?) is a set of scripts and Rakefiles for managing Arch
+installations on my laptop and desktop computers.
+
+# Installation checklist
 
 * Boot the machine on the latest Arch iso using UEFI.
 * Use `fdisk` to make sure partitions correct.
