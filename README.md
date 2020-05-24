@@ -19,5 +19,5 @@ installations on my laptop and desktop computers.
     * Clear `/boot`: `# mkfs.fat -F32 /dev/nvme0n1p1`.
 * Mount partitions under `/mnt`.
 * Turn on swap: `# swapon /dev/mapper/vg01-swap`.
-* Run bootstrap script: `# curl -s https://raw.github.com/jbro/march/boostrap.sh | sh -- hostname=beefy root=/mnt`.
+* Run bootstrap script: `# curl -s https://raw.githubusercontent.com/jbro/march/master/bootstrap.sh | sh -- hostname=beefy root=/mnt`.
 
